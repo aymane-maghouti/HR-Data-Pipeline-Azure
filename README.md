@@ -5,13 +5,12 @@
 1. [Project Overview](#project-overview)
 3. [Technologies Used](#technologies-used)
 4. [Data Pipeline](#data-pipeline)
-5. [ETL Process](#eTL-process)
-6. [Repository Structure](#repository-structure)
-7. [How to Run](#how-to-run)
-8. [Dashboard](#dashboard)
-9. [Acknowledgments](#acknowledgments)
-10. [Conclusion](#conclusion)
-11. [Contacts](#contacts)
+5. [Repository Structure](#repository-structure)
+6. [How to Run](#how-to-run)
+7. [Dashboard](#dashboard)
+8. [Acknowledgments](#acknowledgments)
+9. [Conclusion](#conclusion)
+10. [Contacts](#contacts)
 
 # Project Overview
 This project is a comprehensive data engineering solution that extracts HR data from a GitHub repository, performs data transformations using Azure services, and creates an interactive HR dashboard using Power BI. The goal is to enable HR professionals and decision-makers to gain insights from the HR data for better workforce management.
@@ -32,7 +31,7 @@ Here is the sales data pipeline :
 
 The data pipeline consists of the following stages:
 
-1. **Extract from GitHub Repository**: Azure Data Factory is configured to periodically extract HR data from a specified GitHub repository.
+1. **Extract from GitHub Repository**: Azure Data Factory is configured to  extract HR data from a specified GitHub repository.
 
 2. **Load to Azure Blob Storage**: Extracted data is loaded into Azure Blob Storage for storage.
 
@@ -58,9 +57,7 @@ HR-Data-Pipeline-Azure:.
 │       data_pipeline_data_factory.png
 │       exemple-transformed-data.png
 │       raw-data.png
-│       sales-data-container.png
 │       services_azure.png
-│       storage_Account.png
 │       transformed-data.png
 │       workflow_hr.png
 │
@@ -68,6 +65,7 @@ HR-Data-Pipeline-Azure:.
         DataBricks_noteBook.ipynb
         HR_Dashboard.pbix
         Power_BI _HR_Dashboard.pdf
+
 ```
 
 
@@ -89,17 +87,17 @@ Here is the Azure services that I used :
 
 ### Azure blob storage 
 
-create the two folders in your container (raw-data fodler for the data comes from the git hub repo (data source) , transformed-data folder for the transformed data) 
+create the two folders in your container (raw-data folder for the data comes from the github repo (data source) , transformed-data folder for the transformed data (data destination)).
 
 ![blob storage](images/container.png)
 
 ### Azure data Factory 
 
-Here is the data pipeline created in azure data Factory 
+Here is the data pipeline created in azure data Factory :
 
 ![azure data Factory](images/data_pipeline_data_factory.png)
 
-after running the data pipeline, the data will be loaded into the raw-data folder 
+after running the data pipeline, the data will be loaded into the raw-data folder :
 
 ![raw-data](images/raw-data.png)
 
@@ -117,7 +115,7 @@ To configure the notebooks for data transformation in Azure Databricks, follow t
 
 Make sure to securely manage and store these credentials. (in my case I just put them in the notebook which is not the best practice :), so you can use the azure key vault service to manage the credentials).
 
-after running the script the transformed data will be loaded into the transformed-data folder inside the container
+after running the script the transformed data will be loaded into the transformed-data folder inside the container :
 
 ![transformed-data](images/transformed-data.png)
 
@@ -127,7 +125,7 @@ and here is an example of the data loaded, the file framed in red is the actual 
 
 
 ### Cleaning Up (Data in Azure)
-Cleaning up resources is Optionally
+Cleaning up resources is Optionally:
 
 1. **Azure Blob Storage**: Delete the Azure Blob Storage container used for storing intermediate and transformed data.
 2. **Azure Data Factory**: delete any Azure Data Factory pipelines used for data extraction and loading.
