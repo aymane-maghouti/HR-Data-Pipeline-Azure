@@ -28,7 +28,7 @@ This project is a comprehensive data engineering solution that extracts HR data 
 
 Here is the sales data pipeline :
 
-![HR_Data_pipeline](images/Workflow_hr.png)
+![HR_Data_pipeline](images/workflow_hr.png)
 
 The data pipeline consists of the following stages:
 
@@ -71,7 +71,6 @@ HR-Data-Pipeline-Azure:.
 ```
 
 
-
 # How to Run
 
 ### Prerequisites
@@ -90,9 +89,9 @@ Here is the Azure services that I used :
 
 ### Azure blob storage 
 
-create the two folder in your container (raw-data fodler for the data comes from the git hub repo (data source) , transformed-data folder for the transformed data) 
+create the two folders in your container (raw-data fodler for the data comes from the git hub repo (data source) , transformed-data folder for the transformed data) 
 
-![blob storage](images/conainer.png)
+![blob storage](images/container.png)
 
 ### Azure data Factory 
 
