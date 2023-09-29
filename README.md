@@ -1,4 +1,3 @@
-
 # Human Resources ETL Project
 
 ## Table of Contents
@@ -25,7 +24,7 @@ This project is a comprehensive data engineering solution that extracts HR data 
 
 # Data Pipeline
 
-Here is the sales data pipeline :
+Here is the HR data pipeline :
 
 ![HR_Data_pipeline](images/workflow_hr.png)
 
@@ -71,7 +70,7 @@ HR-Data-Pipeline-Azure:.
 
 # How to Run
 
-### Prerequisites
+#### Prerequisites
 Before running this project, ensure you have the following prerequisites in place:
 
 - **Azure Subscription**: You should have an active Azure subscription for using Azure services.
@@ -85,13 +84,13 @@ Here is the Azure services that I used :
 ![azure services](images/services_azure.png)
 
 
-### Azure blob storage 
+#### Azure blob storage 
 
 create the two folders in your container (raw-data folder for the data comes from the github repo (data source) , transformed-data folder for the transformed data (data destination)).
 
 ![blob storage](images/container.png)
 
-### Azure data Factory 
+#### Azure data Factory 
 
 Here is the data pipeline created in azure data Factory :
 
@@ -102,7 +101,7 @@ after running the data pipeline, the data will be loaded into the raw-data folde
 ![raw-data](images/raw-data.png)
 
 
-### Notebook Configuration
+#### Notebook Configuration
 To configure the notebooks for data transformation in Azure Databricks, follow these steps:
 
 1. Open the PySpark notebooks in the `Main/` directory.
@@ -119,21 +118,20 @@ after running the script the transformed data will be loaded into the transforme
 
 ![transformed-data](images/transformed-data.png)
 
-and here is an example of the data loaded, the file framed in red is the actual data, the other files are just metadata...
+and here is an example of the data loaded, the file framed in red is the actual data, the other files are just meta-data...
 
 ![transformed-data exemple](images/exemple-transformed-data.png)
 
 
-### Cleaning Up (Data in Azure)
+#### Cleaning Up (Data in Azure)
 Cleaning up resources is Optionally:
 
 1. **Azure Blob Storage**: Delete the Azure Blob Storage container used for storing intermediate and transformed data.
 2. **Azure Data Factory**: delete any Azure Data Factory pipelines used for data extraction and loading.
 3. **Azure Databricks**: Terminate any running clusters in Azure Databricks.
 
-### Power Bi connect  
+#### Power Bi connect  
 Set up Power BI to connect to Azure Blob Storage and open the provided `.pbix` file in the `Main/` directory.
-
 
 # Dashboard
 Here is the HR Dashboard created in Power BI:
@@ -144,7 +142,7 @@ Here is the HR Dashboard created in Power BI:
 - Special thanks to the open-source communities behind `azure cloud` ,`Python`, and `Power BI` for providing powerful tools for data extraction, transformation, orchestration, and visualization.
 
 # Conclusion
-This project demonstrates an end-to-end data engineering solution for HR data analysis using Azure services. It streamlines data extraction, transformation, and visualization to provide actionable insights for HR professionals.
+This project demonstrates an end-to-end data engineering solution for HR data analysis using Azure services. It streamlines data extraction, transformation, and visualization to provide actionable insights.
 
 # Contacts
 For any questions or further information, feel free to contact me :)
